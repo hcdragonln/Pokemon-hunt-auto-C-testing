@@ -1,0 +1,40 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+	<PropertyGroup>
+		<OutputType>WinExe</OutputType>
+		<TargetFramework>net48</TargetFramework>
+		<!-- Keep target framework as .NET Framework 4.8 -->
+		<Nullable>enable</Nullable>
+		<!-- Enable nullable reference types -->
+		<UseWindowsForms>true</UseWindowsForms>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<LangVersion>10.0</LangVersion>
+		<!-- Set C# language version to 10.0 -->
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="DotNetEnv" Version="3.1.1" />
+		<PackageReference Include="Emgu.CV" Version="4.1.1.3497" />
+		<PackageReference Include="InputSimulator" Version="1.0.4" />
+		<PackageReference Include="InputSimulatorPlus" Version="1.0.7" />
+		<PackageReference Include="KAutoHelper_Kteam" Version="1.0.1.2" />
+		<PackageReference Include="MailKit" Version="4.12.0" />
+		<PackageReference Include="Tesseract" Version="5.2.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Compile Update="Properties\Resources.Designer.cs">
+	    <DesignTime>True</DesignTime>
+	    <AutoGen>True</AutoGen>
+	    <DependentUpon>Resources.resx</DependentUpon>
+	  </Compile>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <EmbeddedResource Update="Properties\Resources.resx">
+	    <Generator>ResXFileCodeGenerator</Generator>
+	    <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+	  </EmbeddedResource>
+	</ItemGroup>
+
+</Project>
