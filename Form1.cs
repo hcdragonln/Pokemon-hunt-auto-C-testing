@@ -285,7 +285,9 @@ namespace Auto_Click
                         catch (Exception ex)
                         {
                             MessageBox.Show("LOI O NETWORK check");
+                            
                         }
+                        await Task.Delay(2000);
                     }
                     //check email response
                     if (network == 1)
@@ -345,8 +347,9 @@ namespace Auto_Click
         //check response
         private async Task<bool> EmailReplyChecker(string messageId)
         {
-            string email = "akarework4@gmail.com";
-            string password = "ygjqwfhnyuxsylgr";
+            DotNetEnv.Env.Load();
+            string email = Environment.GetEnvironmentVariable("Email_acc");
+            string password = Environment.GetEnvironmentVariable("Email_pass");
             string imapServer = "imap.gmail.com";
             int port = 993;
             int delayMilliseconds = 5 * 60 * 1000; // 5 phút
